@@ -1,0 +1,45 @@
+<TextInput>:
+    font_size: 30
+    multiline: False
+
+<Workspace>:
+
+    txtinpt1: txtinpt1
+    txtinpt2: txtinpt2
+    txtinpt3: txtinpt3
+    outlbl: outlbl
+
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+
+        GridLayout:
+
+            cols: 2
+
+            Label:
+                font_size: 30
+                text: 'a\n\nb\n\nc'
+
+            GridLayout
+                rows: 3
+
+                TextInput:
+                    id: txtinpt1
+
+                TextInput:
+                    id: txtinpt2
+
+                TextInput:
+                    id: txtinpt3
+
+
+        Button:
+            text: 'Submit'
+            font_size: 30
+            on_press: root.sub_pressed()
+
+        Label:
+            id: outlbl
+            font_size: 30
+            text: ''
